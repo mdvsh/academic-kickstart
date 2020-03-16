@@ -355,6 +355,11 @@ small,
   font-size: 80%;
   font-weight: 400; }
 
+.franklin-content ul {
+  padding-left: 0;
+  list-style: none;
+}
+
 mark,
 .mark {
   padding: 0.2em;
@@ -7334,15 +7339,16 @@ blockquote p:last-child {
   .space-below {
     margin-bottom: 10px; } }
 
-.universal-wrapper {
+.franklin-content {
   margin: 0 auto;
   padding-right: 1rem;
   padding-left: 1rem;
-  padding-top: 0.1rem;
+  padding-top: 0.8rem;
   width: 100%; }
 
+
 @media only screen and (min-width: 1001px) {
-  .universal-wrapper {
+  .franklin-content {
     width: 1000px; } }
 
 small,
@@ -9122,8 +9128,3 @@ div.mermaid {
   width: 100%;
   text-align: center;
   margin-bottom: 1rem; }
-
-p.powered-by {
-  font-size: 10px;
-  text-align: center;
-}
