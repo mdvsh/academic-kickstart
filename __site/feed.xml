@@ -1,7 +1,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
-  <title>Franklin Template</title>
-  <description><![CDATA[Example website using Franklin
+  <title>Academic</title>
+  <description><![CDATA[Academic Kickstart Template - Ported over to Franklin.jl
 ]]></description>
   <link>https://tlienart.github.io/FranklinTemplates.jl/</link>
   <atom:link href="https://tlienart.github.io/FranklinTemplates.jl/feed.xml" rel="self" type="application/rss+xml" />

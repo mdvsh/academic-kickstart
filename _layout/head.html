@@ -5,23 +5,91 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   {{if hasmath}} {{insert head_katex.html }}     {{end}}
   {{if hascode}} {{insert head_highlight.html }}   {{end}}
-  <link rel="stylesheet" href="/css/franklin.css">
-  <link rel="stylesheet" href="/css/basic.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.min.css" integrity="sha256-4w9DunooKSr3MFXHXWyFER38WmPdm361bQS/2KUWZbU=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css" integrity="sha256-SHMGCYmST46SoyGgo4YR/9AlK1vf3ff84Aq9yK4hdqM=" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/academic.css">
   <link rel="icon" href="/assets/favicon.png">
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin=anonymous async></script>
   {{isdef title}} <title>{{fill title}}</title>  {{end}}
 </head>
-<body>
-  <header>
-    <div class="blog-name"><a href="">Basic Template</a></div>
-    <nav>
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/menu1/">Code blocks</a></li>
-        <li><a href="/menu2/">More goodies</a></li>
-        <li><a href="/menu3/">Menu 3</a></li>
+<body id="top" data-spy="scroll" data-offset="70" data-target="#navbar-main">
+
+   <!-- For search + search results -->
+   <aside class="search-results" id="search">
+    <div class="container">
+      <section class="search-header">
+        <div class="row no-gutters justify-content-between mb-3">
+          <div class="col-6">
+            <h1>Search</h1>
+          </div>
+          <div class="col-6 col-search-close">
+            <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+          </div>
+        </div>
+        <div id="search-box">
+          <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+          autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+        </div>
+      </section>
+
+      <section class="section-search-results">
+        <div id="search-hits">
+      
+        </div>
+      </section>
+    </div>
+  </aside>
+
+  <!-- Common Navbar for all pages. -->
+
+  <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+    <div class="container">
+      <div class="d-none d-lg-inline-flex">
+        <a class="navbar-brand" href="/">Academic</a>
+      </div>
+
+      <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="fas fa-bars"></i></span>
+      </button>
+
+      <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+        <a class="navbar-brand" href="/">Academic</a>
+      </div>
+
+      <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+        <ul class="navbar-nav d-md-inline-flex">
+          <li class="nav-item">
+            <a class="nav-link " href="/#hero" data-target="#hero"><span>Demo</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="/#posts" data-target="#posts"><span>Posts</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="/#projects" data-target="#projects"><span>Projects</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="/#featured" data-target="#featured"><span>Publications</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="/courses/"><span>Courses</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="/#contact" data-target="#contact"><span>Contact</span></a>
+          </li>
+        </ul>
+      </div>
+  
+      <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
       </ul>
-      <img src="/assets/hamburger.svg" id="menu-icon">
-    </nav>
-  </header>
+  
+    </div>
+  </nav>
+  
 
 <!-- Content appended here -->

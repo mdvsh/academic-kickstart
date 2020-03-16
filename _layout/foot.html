@@ -1,9 +1,43 @@
 <!-- CONTENT ENDS HERE -->
+
+<!-- Footer Goes Here -->
+
+    <div class="container">
+        <footer class="site-footer">
+            <p class="powered-by">
+                <center></center>
+                &copy; {{ fill author }}.
+                Powered by <a href="https://github.com/tlienart/Franklin.jl">Franklin</a> and  <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic Kickstart</a>     
+                
+                <span class="float-right" aria-hidden="true">
+                    <a href="#" class="back-to-top">
+                      <span class="button_icon">
+                        <i class="fas fa-chevron-up fa-2x"></i>
+                      </span>
+                    </a>
+                </span>
+
+            </p>
+        </footer>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src=https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin=anonymous></script>
+    <script src=https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin=anonymous></script>
+    <script src=https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin=anonymous></script>
+    <script src=https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin=anonymous></script>
+    <script src=https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin=anonymous></script>
+    <script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js integrity="sha256-eOgo0OtLL4cdq7RdwRUiGKLX9XsIJ7nGhWEKbohmVAQ=" crossorigin=anonymous></script>
+    <script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/r.min.js></script>
+    <script src=https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.js integrity="sha256-EErZamuLefUnbMBQbsEqu1USa+btR2oIlCpBJbyD4/g=" crossorigin=anonymous></script>
+    <script src="/libs/academic/academic.js"></script>
+    <script src="/libs/academic/academic-search.js"></script>
+    <script src="/libs/academic/algolia-search.js"></script>
     {{ if hasmath }}
         {{ insert foot_katex.html }}
     {{ end }}
     {{ if hascode }}
         {{ insert foot_highlight.html }}
     {{ end }}
+
   </body>
 </html>
