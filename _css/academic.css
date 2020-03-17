@@ -355,9 +355,12 @@ small,
   font-size: 80%;
   font-weight: 400; }
 
-.franklin-content ul {
+.container-fluid ul {
   padding-left: 0;
   list-style: none;
+}
+.container-fluid h1 a{
+  text-decoration: none;
 }
 
 mark,
@@ -5899,6 +5902,9 @@ button.bg-dark:focus {
   margin-left: auto !important; }
 
 @media (min-width: 576px) {
+  .pt-3 {
+    padding-left: 10rem;
+  }
   .m-sm-0 {
     margin: 0 !important; }
   .mt-sm-0,
@@ -8976,7 +8982,9 @@ ul.ul-edu li .description p.institution {
 
 #TableOfContents ul,
 ul.toc-top {
-  padding-left: 0; }
+  padding-left: 0; 
+  font-size: 20px;
+}
 
 #TableOfContents ul ul {
   padding-left: 0.8rem; }

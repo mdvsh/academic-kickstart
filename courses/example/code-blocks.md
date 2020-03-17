@@ -3,6 +3,47 @@
 @def date = Date(2019, 3, 22)
 @def rss = "A short description of the page which would serve as **blurb** in a `RSS` feed; you can use basic markdown here but the whole description string must be a single line (not a multiline string). Like this one for instance. Keep in mind that styling is minimal in RSS so for instance don't expect maths or fancy styling to work; images should be ok though: ![](https://upload.wikimedia.org/wikipedia/en/3/32/Rick_and_Morty_opening_credits.jpeg)"
 
+@@docs
+
+~~~
+        <div class="row flex-xl-nowrap">
+            <div class="col-12 col-md-3 col-xl-3 docs-sidebar">
+                <form class="docs-search d-flex align-items-center">
+                    <button class="btn docs-toggle d-md-none p-0 mr-3" type=button data-toggle=collapse data-target=#docs-nav aria-controls=docs-nav aria-expanded=false aria-label="Toggle section navigation">
+                        <span><i class="fas fa-bars"></i></span></button>
+                    <input name=q type=search class=form-control placeholder=Search... autocomplete=off>
+                </form>
+                <nav class="collapse docs-links" id=docs-nav>
+                    <div class="docs-toc-item active"><a class=docs-toc-link href=/courses/example/>Franklin</a>
+                    </div>
+                    <div class=docs-toc-item><a class=docs-toc-link >Features</a>
+                        <ul class="nav docs-sidenav">
+                            <li><a href=/courses/example/code-blocks/>Code Blocks</a>
+                            </li>
+                            <li><a href=/courses/example/more-goodies/>More Goodies</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div class="d-none d-xl-block col-xl-2 docs-toc">
+                <ul class="nav toc-top">
+                    <li><a href=# id=back_to_top class=docs-toc-title>Contents</a></li>
+                </ul>
+                <nav id=TableOfContents>
+                ~~~
+                \toc
+                ~~~
+            </nav>
+            </div>
+            <main class="col-12 col-md-9 col-xl-7 py-md-3 pl-md-5 docs-content" role=main>
+                <article class=article>
+                    <div class=docs-article-container>
+
+~~~
+
+@@article-style
+
 # Working with code blocks
 
 ## Live evaluation of code blocks
@@ -77,3 +118,7 @@ which is convenient if you're presenting code.
 **Note**: paths specification matters, see [the docs](https://tlienart.github.io/franklindocs/code/index.html#more_on_paths) for details.
 
 Using this approach with the `generate_results.jl` file also makes sure that all the code on your website works and that all results match the code which makes maintenance easier.
+
+@@
+
+@@

@@ -8,7 +8,7 @@ The website_* must be defined for the RSS to work
 @def website_url   = "https://tlienart.github.io/FranklinTemplates.jl/"
 
 @def author = "Madhav Sharma"
-
+@def div_content = "container-fluid"
 <!-----------------------------------------------------
 Add here global latex commands to use throughout your
 pages. It can be math commands but does not need to be.
