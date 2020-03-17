@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="/libs/katex/katex.min.css">
+     
+   <link rel="stylesheet" href="/libs/highlight/github.min.css">
+   
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.min.css" integrity="sha256-4w9DunooKSr3MFXHXWyFER38WmPdm361bQS/2KUWZbU=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css" integrity="sha256-SHMGCYmST46SoyGgo4YR/9AlK1vf3ff84Aq9yK4hdqM=" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/academic.css">
+  <link rel="icon" href="/assets/favicon.png">
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin=anonymous async></script>
+   <title>Code blocks</title>  
+</head>
+<body id="top" data-spy="scroll" data-offset="70" data-target="#navbar-main">
+
+   <!-- For search + search results -->
+   <aside class="search-results" id="search">
+    <div class="container">
+      <section class="search-header">
+        <div class="row no-gutters justify-content-between mb-3">
+          <div class="col-6">
+            <h1>Search</h1>
+          </div>
+          <div class="col-6 col-search-close">
+            <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+          </div>
+        </div>
+        <div id="search-box">
+          <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+          autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+        </div>
+      </section>
+
+      <section class="section-search-results">
+        <div id="search-hits">
+      
+        </div>
+      </section>
+    </div>
+  </aside>
+
+  <!-- Common Navbar for all pages. -->
+
+  <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+    <div class="container">
+      <div class="d-none d-lg-inline-flex">
+        <a class="navbar-brand" href="/">Academic</a>
+      </div>
+
+      <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="fas fa-bars"></i></span>
+      </button>
+
+      <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+        <a class="navbar-brand" href="/">Academic</a>
+      </div>
+
+      <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+        <ul class="navbar-nav d-md-inline-flex">
+          <li class="nav-item">
+            <a class="nav-link " href="/#hero" data-target="#hero"><span>Demo</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="/#posts" data-target="#posts"><span>Posts</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="/#projects" data-target="#projects"><span>Projects</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="/#featured" data-target="#featured"><span>Publications</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="/courses/"><span>Courses</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="/#contact" data-target="#contact"><span>Contact</span></a>
+          </li>
+        </ul>
+      </div>
+  
+      <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+      </ul>
+  
+    </div>
+  </nav>
+  
+
+<!-- Content appended here -->
+
+<div class="container-fluid">
+<div class="docs">
+        <div class="row flex-xl-nowrap">
+            <div class="col-12 col-md-3 col-xl-3 docs-sidebar">
+                <form class="docs-search d-flex align-items-center">
+                    <button class="btn docs-toggle d-md-none p-0 mr-3" type=button data-toggle=collapse data-target=#docs-nav aria-controls=docs-nav aria-expanded=false aria-label="Toggle section navigation">
+                        <span><i class="fas fa-bars"></i></span></button>
+                    <input name=q type=search class=form-control placeholder=Search... autocomplete=off>
+                </form>
+                <nav class="collapse docs-links" id=docs-nav>
+                    <div class="docs-toc-item active"><a class=docs-toc-link href=/courses/example/>Franklin</a>
+                    </div>
+                    <div class=docs-toc-item><a class=docs-toc-link >Features</a>
+                        <ul class="nav docs-sidenav">
+                            <li><a href=/courses/example/code-blocks/>Code Blocks</a>
+                            </li>
+                            <li><a href=/courses/example/more-goodies/>More Goodies</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div class="d-none d-xl-block col-xl-2 docs-toc">
+                <ul class="nav toc-top">
+                    <li><a href=# id=back_to_top class=docs-toc-title>Contents</a></li>
+                </ul>
+                <nav id=TableOfContents>
+                                 <div class="franklin-toc"><ol><li><a href="#working_with_code_blocks">Working with code blocks</a><ol><li><a href="#live_evaluation_of_code_blocks">Live evaluation of code blocks</a></li><li><a href="#including_scripts">Including scripts</a></li></ol></li></ol></div>                 
+            </nav>
+            </div>
+            <main class="col-12 col-md-9 col-xl-7 py-md-3 pl-md-5 docs-content" role=main>
+                <article class=article>
+                    <div class=docs-article-container>
+
+
+<div class="article-style"><h1 id="working_with_code_blocks"><a href="#working_with_code_blocks">Working with code blocks</a></h1>
+<h2 id="live_evaluation_of_code_blocks"><a href="#live_evaluation_of_code_blocks">Live evaluation of code blocks</a></h2>
+<p>If you would like to show code as well as what the code outputs, you only need to specify where the script corresponding to the code block will be saved.</p>
+<p>Indeed, what happens is that the code block gets saved as a script which then gets executed. This also allows for that block to not be re-executed every time you change something <em>else</em> on the page.</p>
+<p>Here&#39;s a simple example &#40;change values in <code>a</code> to see the results being live updated&#41;:</p>
+<pre><code class="language-julia">using LinearAlgebra
+a = [1, 2, 3, 3, 4, 5, 2, 2]
+@show dot(a, a)
+println(dot(a, a))</code></pre>
+<p>You can now show what this would look like:</p>
+<pre><code class="plaintext">dot(a, a) = 72
+72
+</code></pre>
+<p><strong>Notes</strong>:</p>
+<ul>
+<li><p>you don&#39;t have to specify the <code>.jl</code> &#40;see below&#41;,</p>
+</li>
+<li><p>you do need to explicitly use print statements or <code>@show</code> for things to show, so just leaving a variable at the end like you would in the REPL will show nothing,</p>
+</li>
+<li><p>only Julia code blocks are supported at the moment, there may be a support for scripting languages like <code>R</code> or <code>python</code> in the future,</p>
+</li>
+<li><p>the way you specify the path is important; see <a href="https://tlienart.github.io/franklindocs/code/index.html#more_on_paths">the docs</a> for more info. If you don&#39;t care about how things are structured in your <code>/assets/</code> folder, just use <code>./scriptname.jl</code>. If you want things to be grouped, use <code>./group/scriptname.jl</code>. For more involved uses, see the docs.</p>
+</li>
+</ul>
+<p>Lastly, it&#39;s important to realise that if you don&#39;t change the content of the code, then that code will only be executed <em>once</em> even if you make multiple changes to the text around it.</p>
+<p>Here&#39;s another example,</p>
+<pre><code class="language-julia">for i ∈ 1:5, j ∈ 1:5
+    print(" ", rpad("*"^i,5), lpad("*"^(6-i),5), j==5 ? "\n" : " "^4)
+end</code></pre>
+<p>which gives the &#40;utterly useless&#41;:</p>
+<pre><code class="plaintext"> *    *****     *    *****     *    *****     *    *****     *    *****
+ **    ****     **    ****     **    ****     **    ****     **    ****
+ ***    ***     ***    ***     ***    ***     ***    ***     ***    ***
+ ****    **     ****    **     ****    **     ****    **     ****    **
+ *****    *     *****    *     *****    *     *****    *     *****    *
+</code></pre>
+<p>note the absence of <code>.jl</code>, it&#39;s inferred.</p>
+<p>You can also hide lines &#40;that will be executed nonetheless&#41;:</p>
+<pre><code class="language-julia">using Random
+@show randn(2)</code></pre>
+<pre><code class="plaintext">randn(2) = [0.2972879845354616, 0.3823959677906078]
+</code></pre>
+<h2 id="including_scripts"><a href="#including_scripts">Including scripts</a></h2>
+<p>Another approach is to include the content of a script that has already been executed. This can be an alternative to the description above if you&#39;d like to only run the code once because it&#39;s particularly slow or because it&#39;s not Julia code. For this you can use the <code>\input</code> command specifying which language it should be tagged as:</p>
+<pre><code class="language-julia">x = randn(5)
+y = randn(5)
+
+for i in 1:5
+    println(rpad("*"^i, 10, '-'), round(dot(x, y), digits=1))
+end</code></pre> </p>
+<p>these scripts can be run in such a way that their output is also saved to file, see <code>scripts/generate_results.jl</code> for instance, and you can then also input the results:</p>
+<pre><code class="plaintext">*---------1.3
+**--------1.3
+***-------1.3
+****------1.3
+*****-----1.3
+</code></pre> </p>
+<p>which is convenient if you&#39;re presenting code.</p>
+<p><strong>Note</strong>: paths specification matters, see <a href="https://tlienart.github.io/franklindocs/code/index.html#more_on_paths">the docs</a> for details.</p>
+<p>Using this approach with the <code>generate_results.jl</code> file also makes sure that all the code on your website works and that all results match the code which makes maintenance easier.</div></div>
+
+</div>
+<!-- CONTENT ENDS HERE -->
+
+<!-- Footer Goes Here -->
+
+    <div class="container">
+        <footer class="site-footer">
+            <p class="powered-by">
+                Powered by <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and  <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic Kickstart</a>                     
+                <span class="float-right" aria-hidden="true">
+                    <a href="#" class="back-to-top">
+                      <span class="button_icon">
+                        <i class="fas fa-chevron-up fa-2x"></i>
+                      </span>
+                    </a>
+                </span>
+
+            </p>
+        </footer>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src=https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin=anonymous></script>
+    <script src=https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin=anonymous></script>
+    <script src=https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin=anonymous></script>
+    <script src=https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.js integrity="sha256-EErZamuLefUnbMBQbsEqu1USa+btR2oIlCpBJbyD4/g=" crossorigin=anonymous></script>
+    <script src=https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin=anonymous></script>
+
+    <script src="/libs/academic/academic.js"></script>
+    <script src="/libs/academic/academic-search.js"></script>
+    <script src="/libs/academic/algolia-search.js"></script>
+    
+        <script src="/libs/katex/katex.min.js"></script>
+<script src="/libs/katex/auto-render.min.js"></script>
+<script>renderMathInElement(document.body)</script>
+
+    
+    
+        <script src="/libs/highlight/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();hljs.configure({tabReplace: '    '});</script>
+
+    
+
+  </body>
+</html>
