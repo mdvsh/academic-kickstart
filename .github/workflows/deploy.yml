@@ -2,7 +2,7 @@ name: Build and Deploy
 on:
   push:
     branches:
-      - dev
+      - master
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -16,5 +16,5 @@ jobs:
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
         ACCESS_TOKEN: ${{ secrets.FRANKLIN }}
-        BRANCH: master
+        BRANCH: deploy
         FOLDER: __site
