@@ -4,6 +4,10 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/77b8c938-8ccf-46d4-b98b-6a327a75ca11/deploy-status)](https://app.netlify.com/sites/academic-kickstarter/deploys)
 
+### Preview Link
+
+[Deployed with Netlify](https://academic-kickstarter.netlify.com/)
+
 - [x] Navbar *(or `head.html`)*
 - [X] Footer *(or `foot.html`)*
 - [x] Styling imported
