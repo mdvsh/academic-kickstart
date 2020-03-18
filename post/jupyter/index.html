@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="/css/academic.css">
   <link rel="icon" href="/assets/favicon.png">
   <script src=https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin=anonymous async></script>
-   <title>Code blocks</title>  
+   <title>Post | Jupyter</title>  
 </head>
 <body id="top" data-spy="scroll" data-offset="70" data-target="#navbar-main">
 
@@ -97,100 +97,57 @@
 <!-- Content appended here -->
 
 <div class="container-fluid">
-<div class="docs">
-        <div class="row flex-xl-nowrap">
-            <div class="col-12 col-md-3 col-xl-3 docs-sidebar">
-                <form class="docs-search d-flex align-items-center">
-                    <button class="btn docs-toggle d-md-none p-0 mr-3" type=button data-toggle=collapse data-target=#docs-nav aria-controls=docs-nav aria-expanded=false aria-label="Toggle section navigation">
-                        <span><i class="fas fa-bars"></i></span></button>
-                    <input name=q type=search class=form-control placeholder=Search... autocomplete=off>
-                </form>
-                <nav class="collapse docs-links" id=docs-nav>
-                    <div class="docs-toc-item active"><a class=docs-toc-link href=/courses/example/>Franklin</a>
-                    </div>
-                    <div class=docs-toc-item><a class=docs-toc-link >Features</a>
-                        <ul class="nav docs-sidenav">
-                            <li><a href=/courses/example/code-blocks/>Code Blocks</a>
-                            </li>
-                            <li><a href=/courses/example/more-goodies/>More Goodies</a>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
+
+    <article class=article>
+        <div class="article-container pt-3">
+            <h1>Display Jupyter Notebooks with Academic</h1>
+            <p class=page-subtitle>Learn how to blog in Academic using Jupyter notebooks</p>
+            <div class=article-metadata>
+                <div><span><a href=/authors/admin/>Nelson Bighetti</a></span></div><span class=article-date>Last updated on
+Sep 5, 2019</span>
+                <span class=middot-divider></span><span class=article-reading-time>2 min read</span></div>
+        </div>
+        <div class="article-header article-container featured-image-wrapper mt-4 mb-4" style=max-width:720px;max-height:313px>
+            <div style=position:relative><img src=/assets/post/jupyter/featured.png alt class=featured-image></div>
+        </div>
+        <div class=article-container>
+            <div class=article-style>
+
+<pre><code class="language-python">from IPython.core.display import Image
+Image('https://www.python.org/static/community_logos/python-logo-master-v3-TM-flattened.png')</code></pre>
+<p><img src="/assets/post/jupyter/index_1_0.png" alt="png" /></p>
+<pre><code class="language-python">print("Welcome to Academic!")</code></pre>
+<p>Welcome to Academic&#33;</p>
+<h2 id="install_python_and_jupyterlab"><a href="#install_python_and_jupyterlab">Install Python and JupyterLab</a></h2>
+<p><a href="https://www.anaconda.com/distribution/#download-section">Install Anaconda</a> which includes Python 3 and JupyterLab.</p>
+<p>Alternatively, install JupyterLab with <code>pip3 install jupyterlab</code>.</p>
+<h2 id="create_or_upload_a_jupyter_notebook"><a href="#create_or_upload_a_jupyter_notebook">Create or upload a Jupyter notebook</a></h2>
+<p>Run the following commands in your Terminal, substituting <code>&lt;MY-WEBSITE-FOLDER&gt;</code> and <code>&lt;SHORT-POST-TITLE&gt;</code> with the file path to your Academic website folder and a short title for your blog post &#40;use hyphens instead of spaces&#41;, respectively:</p>
+<pre><code class="language-bash">mkdir -p <MY-WEBSITE-FOLDER>/content/post/<SHORT-POST-TITLE>/
+cd <MY-WEBSITE-FOLDER>/content/post/<SHORT-POST-TITLE>/
+jupyter lab index.ipynb</code></pre>
+<p>The <code>jupyter</code> command above will launch the JupyterLab editor, allowing us to add Academic metadata and write the content.</p>
+<h2 id="edit_your_post_metadata"><a href="#edit_your_post_metadata">Edit your post metadata</a></h2>
+<p>The first cell of your Jupter notebook will contain your post metadata &#40;<a href="https://sourcethemes.com/academic/docs/front-matter/">front matter</a>&#41;.</p>
+<p>In Jupter, choose <em>Markdown</em> as the type of the first cell and wrap your Academic metadata in three dashes, indicating that it is YAML front matter: </p>
+<pre><code class="language-julia">---
+title: My post's title
+date: 2019-09-01
+
+# Put any other Academic metadata here...
+---</code></pre>
+<p>Edit the metadata of your post, using the <a href="https://sourcethemes.com/academic/docs/managing-content">documentation</a> as a guide to the available options.</p>
+<p>To set a <a href="https://sourcethemes.com/academic/docs/managing-content/#featured-image">featured image</a>, place an image named <code>featured</code> into your post&#39;s folder.</p>
+<p>For other tips, such as using math, see the guide on <a href="https://sourcethemes.com/academic/docs/writing-markdown-latex/">writing content with Academic</a>. </p>
+<h2 id="convert_notebook_to_markdown"><a href="#convert_notebook_to_markdown">Convert notebook to Markdown</a></h2>
+<pre><code class="language-bash">jupyter nbconvert index.ipynb --to markdown --NbConvertApp.output_files_dir=.</code></pre>
+<h2 id="example"><a href="#example">Example</a></h2>
+<p>This post was created with Jupyter. The orginal files can be found at https://github.com/gcushen/hugo-academic/tree/master/exampleSite/content/post/jupyter</p>
+
             </div>
-            <div class="d-none d-xl-block col-xl-2 docs-toc">
-                <ul class="nav toc-top">
-                    <li><a href=# id=back_to_top class=docs-toc-title>Contents</a></li>
-                </ul>
-                <nav id=TableOfContents>
-                                 <div class="franklin-toc"><ol><li><a href="#working_with_code_blocks">Working with code blocks</a><ol><li><a href="#live_evaluation_of_code_blocks">Live evaluation of code blocks</a></li><li><a href="#including_scripts">Including scripts</a></li></ol></li></ol></div>                 
-            </nav>
-            </div>
-            <main class="col-12 col-md-9 col-xl-7 py-md-3 pl-md-5 docs-content" role=main>
-                <article class=article>
-                    <div class=docs-article-container>
+        </div>
+    </article>
 
-
-<div class="article-style"><h1 id="working_with_code_blocks"><a href="#working_with_code_blocks">Working with code blocks</a></h1>
-<h2 id="live_evaluation_of_code_blocks"><a href="#live_evaluation_of_code_blocks">Live evaluation of code blocks</a></h2>
-<p>If you would like to show code as well as what the code outputs, you only need to specify where the script corresponding to the code block will be saved.</p>
-<p>Indeed, what happens is that the code block gets saved as a script which then gets executed. This also allows for that block to not be re-executed every time you change something <em>else</em> on the page.</p>
-<p>Here&#39;s a simple example &#40;change values in <code>a</code> to see the results being live updated&#41;:</p>
-<pre><code class="language-julia">using LinearAlgebra
-a = [1, 2, 3, 3, 4, 5, 2, 2]
-@show dot(a, a)
-println(dot(a, a))</code></pre>
-<p>You can now show what this would look like:</p>
-<pre><code class="plaintext">dot(a, a) = 72
-72
-</code></pre>
-<p><strong>Notes</strong>:</p>
-<ul>
-<li><p>you don&#39;t have to specify the <code>.jl</code> &#40;see below&#41;,</p>
-</li>
-<li><p>you do need to explicitly use print statements or <code>@show</code> for things to show, so just leaving a variable at the end like you would in the REPL will show nothing,</p>
-</li>
-<li><p>only Julia code blocks are supported at the moment, there may be a support for scripting languages like <code>R</code> or <code>python</code> in the future,</p>
-</li>
-<li><p>the way you specify the path is important; see <a href="https://tlienart.github.io/franklindocs/code/index.html#more_on_paths">the docs</a> for more info. If you don&#39;t care about how things are structured in your <code>/assets/</code> folder, just use <code>./scriptname.jl</code>. If you want things to be grouped, use <code>./group/scriptname.jl</code>. For more involved uses, see the docs.</p>
-</li>
-</ul>
-<p>Lastly, it&#39;s important to realise that if you don&#39;t change the content of the code, then that code will only be executed <em>once</em> even if you make multiple changes to the text around it.</p>
-<p>Here&#39;s another example,</p>
-<pre><code class="language-julia">for i ∈ 1:5, j ∈ 1:5
-    print(" ", rpad("*"^i,5), lpad("*"^(6-i),5), j==5 ? "\n" : " "^4)
-end</code></pre>
-<p>which gives the &#40;utterly useless&#41;:</p>
-<pre><code class="plaintext"> *    *****     *    *****     *    *****     *    *****     *    *****
- **    ****     **    ****     **    ****     **    ****     **    ****
- ***    ***     ***    ***     ***    ***     ***    ***     ***    ***
- ****    **     ****    **     ****    **     ****    **     ****    **
- *****    *     *****    *     *****    *     *****    *     *****    *
-</code></pre>
-<p>note the absence of <code>.jl</code>, it&#39;s inferred.</p>
-<p>You can also hide lines &#40;that will be executed nonetheless&#41;:</p>
-<pre><code class="language-julia">using Random
-@show randn(2)</code></pre>
-<pre><code class="plaintext">randn(2) = [0.2972879845354616, 0.3823959677906078]
-</code></pre>
-<h2 id="including_scripts"><a href="#including_scripts">Including scripts</a></h2>
-<p>Another approach is to include the content of a script that has already been executed. This can be an alternative to the description above if you&#39;d like to only run the code once because it&#39;s particularly slow or because it&#39;s not Julia code. For this you can use the <code>\input</code> command specifying which language it should be tagged as:</p>
-<pre><code class="language-julia">x = randn(5)
-y = randn(5)
-
-for i in 1:5
-    println(rpad("*"^i, 10, '-'), round(dot(x, y), digits=1))
-end</code></pre> </p>
-<p>these scripts can be run in such a way that their output is also saved to file, see <code>scripts/generate_results.jl</code> for instance, and you can then also input the results:</p>
-<pre><code class="plaintext">*---------1.3
-**--------1.3
-***-------1.3
-****------1.3
-*****-----1.3
-</code></pre> </p>
-<p>which is convenient if you&#39;re presenting code.</p>
-<p><strong>Note</strong>: paths specification matters, see <a href="https://tlienart.github.io/franklindocs/code/index.html#more_on_paths">the docs</a> for details.</p>
-<p>Using this approach with the <code>generate_results.jl</code> file also makes sure that all the code on your website works and that all results match the code which makes maintenance easier.</div></div>
 
 </div>
 <!-- CONTENT ENDS HERE -->

@@ -72,6 +72,18 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   margin-bottom: 0.5rem; }
 
+h1 a:link{
+  color: black;
+  text-decoration: none;
+}
+h2 a:link {
+  color: black;
+  text-decoration: none;
+}
+h3 a:link {
+  color: black;
+  text-decoration: none !important;
+}
 p {
   margin-top: 0;
   margin-bottom: 1rem; }
@@ -359,8 +371,8 @@ small,
   padding-left: 0;
   list-style: none;
 }
-.container-fluid h1 a{
-  text-decoration: none;
+.container-fluid h1 {
+  color: black !important;
 }
 
 mark,
@@ -7446,8 +7458,8 @@ a[data-fancybox] {
 footer {
   margin: 4rem 0 0;
   padding: 2rem 0;
-  width: 100%; }
-
+  width: 100%;
+}
 footer p {
   font-size: 0.75rem;
   text-align: center; }

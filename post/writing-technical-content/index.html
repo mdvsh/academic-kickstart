@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="/css/academic.css">
   <link rel="icon" href="/assets/favicon.png">
   <script src=https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin=anonymous async></script>
-   <title>Code blocks</title>  
+   <title>Writing Technical Content</title>  
 </head>
 <body id="top" data-spy="scroll" data-offset="70" data-target="#navbar-main">
 
@@ -97,41 +97,21 @@
 <!-- Content appended here -->
 
 <div class="container-fluid">
-<div class="docs">
-        <div class="row flex-xl-nowrap">
-            <div class="col-12 col-md-3 col-xl-3 docs-sidebar">
-                <form class="docs-search d-flex align-items-center">
-                    <button class="btn docs-toggle d-md-none p-0 mr-3" type=button data-toggle=collapse data-target=#docs-nav aria-controls=docs-nav aria-expanded=false aria-label="Toggle section navigation">
-                        <span><i class="fas fa-bars"></i></span></button>
-                    <input name=q type=search class=form-control placeholder=Search... autocomplete=off>
-                </form>
-                <nav class="collapse docs-links" id=docs-nav>
-                    <div class="docs-toc-item active"><a class=docs-toc-link href=/courses/example/>Franklin</a>
-                    </div>
-                    <div class=docs-toc-item><a class=docs-toc-link >Features</a>
-                        <ul class="nav docs-sidenav">
-                            <li><a href=/courses/example/code-blocks/>Code Blocks</a>
-                            </li>
-                            <li><a href=/courses/example/more-goodies/>More Goodies</a>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
-            </div>
-            <div class="d-none d-xl-block col-xl-2 docs-toc">
-                <ul class="nav toc-top">
-                    <li><a href=# id=back_to_top class=docs-toc-title>Contents</a></li>
-                </ul>
-                <nav id=TableOfContents>
-                                 <div class="franklin-toc"><ol><li><a href="#working_with_code_blocks">Working with code blocks</a><ol><li><a href="#live_evaluation_of_code_blocks">Live evaluation of code blocks</a></li><li><a href="#including_scripts">Including scripts</a></li></ol></li></ol></div>                 
-            </nav>
-            </div>
-            <main class="col-12 col-md-9 col-xl-7 py-md-3 pl-md-5 docs-content" role=main>
-                <article class=article>
-                    <div class=docs-article-container>
 
+<article class=article>
+    <div class="article-container pt-3">
+        <h1>Writing technical content in Academic</h1>
+        <div class=article-metadata><span class=article-date>Last updated on Jan 25, 2020</span>
+            <span class=middot-divider></span><span class=article-reading-time>4 min read</span></div>
+    </div>
+    <div class="article-header container-fluid featured-image-wrapper mt-4 mb-4" style=max-width:2000px;max-height:1333px>
+        <div style=position:relative><img src="/assets/post/writing-technical-content/featured.jpg" alt class=featured-image>
+            <span class=article-header-caption>Image credit: <a href=https://unsplash.com/photos/OGZtQF8iC0g><strong>John Moeses Bauan</strong></a></span></div>
+    </div>
+    <div class=article-container>
+        <div class=article-style>
 
-<div class="article-style"><h1 id="working_with_code_blocks"><a href="#working_with_code_blocks">Working with code blocks</a></h1>
+<h1 id="working_with_code_blocks"><a href="#working_with_code_blocks">Working with code blocks</a></h1>
 <h2 id="live_evaluation_of_code_blocks"><a href="#live_evaluation_of_code_blocks">Live evaluation of code blocks</a></h2>
 <p>If you would like to show code as well as what the code outputs, you only need to specify where the script corresponding to the code block will be saved.</p>
 <p>Indeed, what happens is that the code block gets saved as a script which then gets executed. This also allows for that block to not be re-executed every time you change something <em>else</em> on the page.</p>
@@ -190,7 +170,49 @@ end</code></pre> </p>
 </code></pre> </p>
 <p>which is convenient if you&#39;re presenting code.</p>
 <p><strong>Note</strong>: paths specification matters, see <a href="https://tlienart.github.io/franklindocs/code/index.html#more_on_paths">the docs</a> for details.</p>
-<p>Using this approach with the <code>generate_results.jl</code> file also makes sure that all the code on your website works and that all results match the code which makes maintenance easier.</div></div>
+<p>Using this approach with the <code>generate_results.jl</code> file also makes sure that all the code on your website works and that all results match the code which makes maintenance easier.</p>
+<hr />
+<h1 id="more_goodies"><a href="#more_goodies">More goodies</a></h1>
+<h2 id="more_markdown_support"><a href="#more_markdown_support">More markdown support</a></h2>
+<p>The Julia Markdown parser in Julia&#39;s stdlib is not exactly complete and Franklin strives to bring useful extensions that are either defined in standard specs such as Common Mark or that just seem like useful extensions.</p>
+<ul>
+<li><p>indirect references for instance <a href="http://existentialcomics.com/">like so</a></p>
+</li>
+</ul>
+ or also for images</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/9/90/Krul.svg" alt="some image"></p>
+<p>some people find that useful as it allows referring multiple times to the same link for instance.</p>
+
+<ul>
+<li><p>un-qualified code blocks and indented code blocks are allowed and are julia by default</p>
+</li>
+</ul>
+<pre><code class="language-julia">a = 1
+b = a+1</code></pre> or</p>
+<pre><code class="language-julia">a = 1
+b = a+1</code></pre>
+<p>you can specify the default language with <code>@def lang &#61; &quot;julia&quot;</code>. If you actually want a &quot;plain&quot; code block, qualify it as <code>plaintext</code> like</p>
+<pre><code class="language-plaintext">so this is plain-text stuff.</code></pre>
+<h2 id="a_bit_more_highlighting"><a href="#a_bit_more_highlighting">A bit more highlighting</a></h2>
+<p>Extension of highlighting for <code>pkg</code> an <code>shell</code> mode in Julia:</p>
+<pre><code class="language-julia-repl">(v1.4) pkg> add Franklin
+shell> blah
+julia> 1+1
+(Sandbox) pkg> resolve</code></pre>
+<p>you can tune the colouring in the CSS etc via the following classes:</p>
+<ul>
+<li><p><code>.hljs-meta</code> &#40;for <code>julia&gt;</code>&#41;</p>
+</li>
+<li><p><code>.hljs-metas</code> &#40;for <code>shell&gt;</code>&#41;</p>
+</li>
+<li><p><code>.hljs-metap</code> &#40;for <code>...pkg&gt;</code>&#41;</p>
+</li>
+</ul>
+
+            </div>
+        </div>
+    </article>
+
 
 </div>
 <!-- CONTENT ENDS HERE -->
